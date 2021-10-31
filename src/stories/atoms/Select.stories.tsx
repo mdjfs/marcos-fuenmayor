@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
-import Select from "../components/atoms/select/select";
-import { SelectProps } from "../components/atoms/select/select.interfaces";
+import Select from "../../components/atoms/select/select";
+import { SelectProps } from "../../components/atoms/select/select.interfaces";
 
 export default {
   title: "Atoms/Select",

@@ -3,24 +3,16 @@ import { Choice, SelectProps } from "./select.interfaces";
 import { FaAngleDown, FaTimes } from "react-icons/fa";
 import "./select.scss";
 import { ChangeEvent, useState, CSSProperties, useEffect } from "react";
+import { useClasses } from "../../../common/helpers/components.helpers";
 
-const Select = ({
-  isDark,
-  isPrimary,
-  dimension,
-  onSelectChoice,
-  choices,
-}: SelectProps) => {
+const Select = ({ onSelectChoice, choices, ...props }: SelectProps) => {
   const [isOpen, setIsOpen] = useState<boolean | undefined>();
   const [filtered, setFiltered] = useState<Array<string>>();
   const [choice, setChoice] = useState<Choice>();
   const firstRender = isOpen === undefined;
-
-  let selectClass = "";
-  selectClass += " " + (isPrimary ? "select-primary" : "select-secondary");
-  selectClass += " " + (isDark ? "dark" : "");
-  selectClass += " " + (dimension || "medium");
-  selectClass += " " + (firstRender ? "" : isOpen ? "opened" : "closed");
+  const [classes] = useClasses("select", props);
+  const status = firstRender ? "" : isOpen ? "opened" : "closed";
+  const selectClass = classes + " " + status;
 
   function getKey([key]: Choice) {
     return key;
@@ -70,9 +62,9 @@ const Select = ({
         {!choice && (
           <>
             <Input
-              dimension={dimension}
-              isPrimary={isPrimary}
-              isDark={isDark}
+              dimension={props.dimension}
+              isPrimary={props.isPrimary}
+              isDark={props.isDark}
               onChange={inputListener}
             />
             <button onClick={() => setIsOpen(!(isOpen || false))}>
@@ -83,9 +75,9 @@ const Select = ({
         {choice && (
           <>
             <Input
-              dimension={dimension}
-              isPrimary={isPrimary}
-              isDark={isDark}
+              dimension={props.dimension}
+              isPrimary={props.isPrimary}
+              isDark={props.isDark}
               disabled
             />
             <div className="selected">{choice[1]}</div>

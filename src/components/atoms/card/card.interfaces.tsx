@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
+import { ThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
-export interface CardProps {
-  isDark?: Boolean;
-  dimension?: "small" | "medium" | "large";
-  content: string | ReactNode;
+export interface CardProps extends ThemedComponent {
+  content?: string | ReactNode;
 }

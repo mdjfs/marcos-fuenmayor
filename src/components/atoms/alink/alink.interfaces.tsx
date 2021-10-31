@@ -1,8 +1,9 @@
 import { AnchorHTMLAttributes, ReactNode } from "react";
+import { BiThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
-export interface ALinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  isPrimary?: Boolean;
-  isDark?: Boolean;
-  dimension?: "small" | "medium" | "large";
+export type OverrideLink = AnchorHTMLAttributes<HTMLAnchorElement> &
+  BiThemedComponent;
+
+export interface ALinkProps extends OverrideLink {
   content?: string | ReactNode;
 }

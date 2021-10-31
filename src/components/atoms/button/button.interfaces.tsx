@@ -1,8 +1,9 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import { BiThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  isPrimary?: Boolean;
-  isDark?: Boolean;
-  dimension?: "small" | "medium" | "large";
+export type OverrideButton = BiThemedComponent &
+  ButtonHTMLAttributes<HTMLButtonElement>;
+
+export interface ButtonProps extends OverrideButton {
   content?: string | ReactNode;
 }

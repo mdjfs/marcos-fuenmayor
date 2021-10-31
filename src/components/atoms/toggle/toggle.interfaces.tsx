@@ -1,7 +1,6 @@
-export interface ToggleProps {
-  dimension?: "small" | "medium" | "large";
-  isPrimary?: boolean;
-  isDark?: boolean;
+import { BiThemedComponent } from "../../../common/interfaces/theme.interfaces";
+
+export interface ToggleProps extends BiThemedComponent {
   left: string;
   right: string;
   onToggle: (status: boolean) => void;

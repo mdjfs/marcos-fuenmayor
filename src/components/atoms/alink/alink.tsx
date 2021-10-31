@@ -1,20 +1,12 @@
+import { useClasses } from "../../../common/helpers/components.helpers";
 import { ALinkProps } from "./alink.interfaces";
 import "./alink.scss";
 
-const ALink = ({
-  isPrimary,
-  isDark,
-  dimension,
-  content,
-  ...inherited
-}: ALinkProps) => {
-  let ALinkClass = "";
-  ALinkClass += " " + (isPrimary ? "alink-primary" : "alink-secondary");
-  ALinkClass += " " + (isDark ? "dark" : "");
-  ALinkClass += " " + (dimension || "medium");
+const ALink = (props: ALinkProps) => {
+  const [classes, inherit] = useClasses("alink", props);
   return (
-    <a className={ALinkClass} {...inherited}>
-      {content}
+    <a className={classes} {...inherit}>
+      {props.content}
     </a>
   );
 };

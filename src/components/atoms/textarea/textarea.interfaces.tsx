@@ -1,10 +1,10 @@
 import { TextareaHTMLAttributes } from "react";
+import { BiThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
-export interface TextAreaProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-  dimension?: "small" | "medium" | "large";
-  isPrimary?: boolean;
-  isDark?: boolean;
+export type OverrideTextArea = BiThemedComponent &
+  TextareaHTMLAttributes<HTMLTextAreaElement>;
+
+export interface TextAreaProps extends OverrideTextArea {
   onType?: (value: string, matched?: boolean) => void;
   matchRegex?: RegExp;
 }

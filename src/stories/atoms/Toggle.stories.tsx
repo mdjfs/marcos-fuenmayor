@@ -1,10 +1,10 @@
-import Button from "../components/atoms/button/button";
-import { ButtonProps } from "../components/atoms/button/button.interfaces";
 import { Story, Meta } from "@storybook/react";
+import Toggle from "../../components/atoms/toggle/toggle";
+import { ToggleProps } from "../../components/atoms/toggle/toggle.interfaces";
 
 export default {
-  title: "Atoms/Button",
-  component: Button,
+  title: "Atoms/Toggle",
+  component: Toggle,
   argTypes: {
     dimension: {
       options: ["small", "medium", "large"],
@@ -13,8 +13,8 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args: ButtonProps) => (
-  <Button {...args} />
+const Template: Story<ToggleProps> = (args: ToggleProps) => (
+  <Toggle {...args} />
 );
 
 export const Default = Template.bind({});
@@ -22,5 +22,7 @@ Default.args = {
   isPrimary: true,
   isDark: false,
   dimension: "medium",
-  content: "Esto es un boton",
+  left: "on",
+  right: "off",
+  onToggle: console.log,
 };

@@ -1,9 +1,10 @@
-import { InputHTMLAttributes, ChangeEvent } from "react";
+import { InputHTMLAttributes } from "react";
+import { BiThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  dimension?: "small" | "medium" | "large";
-  isPrimary?: boolean;
-  isDark?: boolean;
+export type OverrideInput = BiThemedComponent &
+  InputHTMLAttributes<HTMLInputElement>;
+
+export interface InputProps extends OverrideInput {
   onType?: (value: string, matched?: boolean) => void;
   matchRegex?: RegExp;
 }

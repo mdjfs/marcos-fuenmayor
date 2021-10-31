@@ -1,10 +1,10 @@
 import { Story, Meta } from "@storybook/react";
-import Card from "../components/atoms/card/card";
-import { CardProps } from "../components/atoms/card/card.interfaces";
+import ALink from "../../components/atoms/alink/alink";
+import { ALinkProps } from "../../components/atoms/alink/alink.interfaces";
 
 export default {
-  title: "Atoms/Card",
-  component: Card,
+  title: "Atoms/Alink",
+  component: ALink,
   argTypes: {
     dimension: {
       options: ["small", "medium", "large"],
@@ -13,11 +13,12 @@ export default {
   },
 } as Meta;
 
-const Template: Story<CardProps> = (args: CardProps) => <Card {...args} />;
+const Template: Story<ALinkProps> = (args: ALinkProps) => <ALink {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  isPrimary: true,
   isDark: false,
   dimension: "medium",
-  content: "Esto es una carta",
+  content: "Esto es un link",
 };

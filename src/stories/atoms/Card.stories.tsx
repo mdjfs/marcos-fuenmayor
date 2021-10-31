@@ -1,10 +1,10 @@
 import { Story, Meta } from "@storybook/react";
-import Header from "../components/atoms/header/header";
-import { HeaderProps } from "../components/atoms/header/header.interfaces";
+import Card from "../../components/atoms/card/card";
+import { CardProps } from "../../components/atoms/card/card.interfaces";
 
 export default {
-  title: "Atoms/Header",
-  component: Header,
+  title: "Atoms/Card",
+  component: Card,
   argTypes: {
     dimension: {
       options: ["small", "medium", "large"],
@@ -13,13 +13,11 @@ export default {
   },
 } as Meta;
 
-const Template: Story<HeaderProps> = (args: HeaderProps) => (
-  <Header {...args} />
-);
+const Template: Story<CardProps> = (args: CardProps) => <Card {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
   isDark: false,
   dimension: "medium",
-  content: "Esto es un header",
+  content: "Esto es una carta",
 };

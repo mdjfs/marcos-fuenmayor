@@ -1,11 +1,10 @@
+import { useClasses } from "../../../common/helpers/components.helpers";
 import { CardProps } from "./card.interfaces";
 import "./card.scss";
 
-const Card = ({ isDark, content, dimension }: CardProps) => {
-  let cardClass = "card";
-  cardClass += " " + (isDark ? "dark" : "");
-  cardClass += " " + (dimension || "medium");
-  return <div className={cardClass}>{content}</div>;
+const Card = (props: CardProps) => {
+  const [classes] = useClasses("card", props, false);
+  return <div className={classes}>{props.content}</div>;
 };
 
 export default Card;

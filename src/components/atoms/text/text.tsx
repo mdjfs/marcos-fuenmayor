@@ -1,11 +1,10 @@
+import { useClasses } from "../../../common/helpers/components.helpers";
 import { TextProps } from "./text.interfaces";
 import "./text.scss";
 
-const Text = ({ content, isDark, dimension }: TextProps) => {
-  let textClass = "text";
-  textClass += " " + (isDark ? "dark" : "");
-  textClass += " " + (dimension || "medium");
-  return <p className={textClass}>{content}</p>;
+const Text = ({ content, ...props }: TextProps) => {
+  const [classes] = useClasses("text", props, false);
+  return <p className={classes}>{content}</p>;
 };
 
 export default Text;

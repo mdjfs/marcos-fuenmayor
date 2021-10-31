@@ -1,22 +1,14 @@
 import { ChangeEvent, useState } from "react";
+import { useClasses } from "../../../common/helpers/components.helpers";
 import { TextAreaProps } from "./textarea.interfaces";
 import "./textarea.scss";
 
-const TextArea = ({
-  isDark,
-  isPrimary,
-  onType,
-  dimension,
-  matchRegex,
-  ...inherited
-}: TextAreaProps) => {
+const TextArea = ({ onType, matchRegex, ...props }: TextAreaProps) => {
   const [isMatched, setIsMatched] = useState(true);
 
-  let inputClass = "";
-  inputClass += " " + (isPrimary ? "textarea-primary" : "textarea-secondary");
-  inputClass += " " + (isDark ? "dark" : "");
-  inputClass += " " + (dimension || "medium");
-  inputClass += " " + (isMatched ? "" : "unmatched");
+  const [classes, inherited] = useClasses("textarea", props);
+  const matched = isMatched ? "matched" : "unmatched";
+  const inputClass = classes + " " + matched;
 
   function listener(e: ChangeEvent<HTMLTextAreaElement>) {
     if (onType) {

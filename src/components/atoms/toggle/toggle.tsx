@@ -1,22 +1,13 @@
 import { useEffect, useState } from "react";
+import { useClasses } from "../../../common/helpers/components.helpers";
 import { ToggleProps } from "./toggle.interfaces";
 import "./toggle.scss";
 
-const Toggle = ({
-  isDark,
-  isPrimary,
-  dimension,
-  left,
-  right,
-  onToggle,
-}: ToggleProps) => {
+const Toggle = ({ left, right, onToggle, ...props }: ToggleProps) => {
   const [status, setStatus] = useState(true);
-
-  let toggleClass = "";
-  toggleClass += " " + (isPrimary ? "toggle-primary" : "toggle-secondary");
-  toggleClass += " " + (isDark ? "dark" : "");
-  toggleClass += " " + (dimension || "medium");
-  toggleClass += " " + (status ? "left" : "right");
+  const [classes] = useClasses("toggle", props);
+  const direction = status ? "left" : "right";
+  const toggleClass = classes + " " + direction;
 
   useEffect(() => {
     if (onToggle) onToggle(status);

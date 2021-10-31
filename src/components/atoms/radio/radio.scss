@@ -1,19 +1,18 @@
-@import "../../../design-tokens/build/scss/variables";
+@import "../../../subatoms/build/scss/variables";
 
-.radio-primary,
-.radio-secondary {
+.radio,
+.radio {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.radio-primary.single .choice.selected button,
-.radio-secondary.single .choice.selected button {
+.radio.single .choice.selected button,
+.radio.single .choice.selected button {
   cursor: inherit;
 }
 
-.radio-primary.small .choice,
-.radio-secondary.small .choice {
+.radio.small .choice {
   display: flex;
   margin-top: $size-general-xsmall;
   font-family: $font-base-primary;
@@ -21,30 +20,26 @@
   font-size: $size-font-small;
 }
 
-.radio-primary.small .choice button,
-.radio-secondary.small .choice button {
+.radio.small .choice button {
   border-style: solid;
   border-color: transparent;
   margin-right: $size-general-xsmall;
   cursor: pointer;
 }
 
-.radio-primary.small.single .choice button,
-.radio-secondary.small.single .choice button {
+.radio.small.single .choice button {
   padding: $size-general-xsmall;
   border-radius: $size-general-medium;
   border-width: $size-general-xsmall;
 }
 
-.radio-primary.small.multiple .choice button,
-.radio-secondary.small.multiple .choice button {
+.radio.small.multiple .choice button {
   width: $size-general-small;
   height: $size-general-medium;
   font-size: $size-font-small;
 }
 
-.radio-primary.medium .choice,
-.radio-secondary.medium .choice {
+.radio.medium .choice {
   display: flex;
   margin-top: $size-general-small;
   font-family: $font-base-primary;
@@ -52,30 +47,26 @@
   font-size: $size-font-medium;
 }
 
-.radio-primary.medium .choice button,
-.radio-secondary.medium .choice button {
+.radio.medium .choice button {
   border-style: solid;
   border-color: transparent;
   margin-right: $size-general-small;
   cursor: pointer;
 }
 
-.radio-primary.medium.single .choice button,
-.radio-secondary.medium.single .choice button {
+.radio.medium.single .choice button {
   padding: $size-general-xsmall;
   border-radius: $size-general-medium;
   border-width: $size-general-small;
 }
 
-.radio-primary.medium.multiple .choice button,
-.radio-secondary.medium.multiple .choice button {
+.radio.medium.multiple .choice button {
   width: $size-general-medium;
   height: $size-general-medium;
   font-size: $size-font-medium;
 }
 
-.radio-primary.large .choice,
-.radio-secondary.large .choice {
+.radio.large .choice {
   display: flex;
   margin-top: $size-general-medium;
   font-family: $font-base-primary;
@@ -83,38 +74,35 @@
   font-size: $size-font-large;
 }
 
-.radio-primary.large .choice button,
-.radio-secondary.large .choice button {
+.radio.large .choice button {
   border-style: solid;
   border-color: transparent;
   margin-right: $size-general-medium;
   cursor: pointer;
 }
 
-.radio-primary.large.single .choice button,
-.radio-secondary.large.single .choice button {
+.radio.large.single .choice button {
   padding: $size-general-small;
   border-radius: $size-general-large;
   border-width: $size-general-medium;
 }
 
-.radio-primary.large.multiple .choice button,
-.radio-secondary.large.multiple .choice button {
+.radio.large.multiple .choice button {
   width: $size-general-large;
   height: $size-general-large;
   font-size: $size-font-large;
 }
 
-.radio-primary.single .choice button {
+.radio.single .choice button {
   background-color: $color-base-primary-light;
   box-shadow: 0 0 $size-general-small 0 $color-base-primary-light;
 }
 
-.radio-primary.single .choice.selected button {
+.radio.single .choice.selected button {
   border-color: $color-base-primary;
 }
 
-.radio-primary.multiple .choice button {
+.radio.multiple .choice button {
   background-color: $color-base-primary-light;
   box-shadow: 0 0 $size-general-small 0 $color-base-primary-light;
   color: $color-font-primary;

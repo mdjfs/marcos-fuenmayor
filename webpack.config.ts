@@ -1,3 +1,5 @@
+import { resolve } from "path";
+
 export default {
   entry: "./src/index.tsx",
   target: "web",
@@ -6,6 +8,7 @@ export default {
   },
   output: {
     filename: "[name].bundle.js",
+    path: resolve(__dirname, "public"),
   },
   module: {
     rules: [

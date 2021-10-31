@@ -1,10 +1,10 @@
 import { Story, Meta } from "@storybook/react";
-import Input from "../components/atoms/input/input";
-import { InputProps } from "../components/atoms/input/input.interfaces";
+import TextArea from "../../components/atoms/textarea/textarea";
+import { TextAreaProps } from "../../components/atoms/textarea/textarea.interfaces";
 
 export default {
-  title: "Atoms/Input",
-  component: Input,
+  title: "Atoms/TextArea",
+  component: TextArea,
   argTypes: {
     dimension: {
       options: ["small", "medium", "large"],
@@ -13,14 +13,16 @@ export default {
   },
 } as Meta;
 
-const Template: Story<InputProps> = (args: InputProps) => <Input {...args} />;
+const Template: Story<TextAreaProps> = (args: TextAreaProps) => (
+  <TextArea {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
   isPrimary: true,
   isDark: false,
   dimension: "medium",
-  placeholder: "Esto es un input",
+  placeholder: "Esto es un textarea",
   onType: console.log,
 };
 

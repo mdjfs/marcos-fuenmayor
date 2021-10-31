@@ -1,10 +1,10 @@
 import { Story, Meta } from "@storybook/react";
-import ALink from "../components/atoms/alink/alink";
-import { ALinkProps } from "../components/atoms/alink/alink.interfaces";
+import Header from "../../components/atoms/header/header";
+import { HeaderProps } from "../../components/atoms/header/header.interfaces";
 
 export default {
-  title: "Atoms/Alink",
-  component: ALink,
+  title: "Atoms/Header",
+  component: Header,
   argTypes: {
     dimension: {
       options: ["small", "medium", "large"],
@@ -13,12 +13,13 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ALinkProps> = (args: ALinkProps) => <ALink {...args} />;
+const Template: Story<HeaderProps> = (args: HeaderProps) => (
+  <Header {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
-  isPrimary: true,
   isDark: false,
   dimension: "medium",
-  content: "Esto es un link",
+  content: "Esto es un header",
 };

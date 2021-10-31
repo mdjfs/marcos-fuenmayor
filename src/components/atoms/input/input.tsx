@@ -1,24 +1,11 @@
 import { ChangeEvent, useState } from "react";
+import { useClasses } from "../../../common/helpers/components.helpers";
 import { InputProps } from "./input.interfaces";
 import "./input.scss";
 
-const Input = ({
-  isDark,
-  isPrimary,
-  onType,
-  dimension,
-  matchRegex,
-  type,
-  ...inherited
-}: InputProps) => {
+const Input = ({ onType, matchRegex, type, ...props }: InputProps) => {
   const [isMatched, setIsMatched] = useState(true);
-
-  let inputClass = "";
-  inputClass += " " + (isPrimary ? "input-primary" : "input-secondary");
-  inputClass += " " + (isDark ? "dark" : "");
-  inputClass += " " + (dimension || "medium");
-  inputClass += " " + (isMatched ? "" : "unmatched");
-  type = "text"; // just text inputs
+  const [classes, inherited] = useClasses("input", props);
 
   function listener(e: ChangeEvent<HTMLInputElement>) {
     if (onType) {
@@ -33,9 +20,9 @@ const Input = ({
 
   return (
     <input
-      type={type}
+      type="text"
       onChange={listener}
-      className={inputClass}
+      className={`${classes} ${isMatched ? "matched" : "unmatched"}`}
       {...inherited}
     />
   );

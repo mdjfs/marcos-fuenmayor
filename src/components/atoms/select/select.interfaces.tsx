@@ -1,11 +1,9 @@
 import { ReactNode } from "react";
+import { BiThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
 export type Choice = [string, string | ReactNode];
 
-export interface SelectProps {
-  dimension?: "small" | "medium" | "large";
-  isPrimary?: boolean;
-  isDark?: boolean;
+export interface SelectProps extends BiThemedComponent {
   choices?: Choice[];
   onSelectChoice?: (choice: Choice | null) => void;
 }

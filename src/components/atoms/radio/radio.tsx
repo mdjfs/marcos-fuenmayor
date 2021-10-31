@@ -1,21 +1,18 @@
 import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import { useClasses } from "../../../common/helpers/components.helpers";
 import { RadioProps } from "./radio.interfaces";
 import "./radio.scss";
 
 const Radio = ({
-  isDark,
-  isPrimary,
-  dimension,
   choices,
   onSelectChoice,
   isMultiple,
+  ...props
 }: RadioProps) => {
-  let radioClass = "";
-  radioClass += " " + (isPrimary ? "radio-primary" : "radio-secondary");
-  radioClass += " " + (isDark ? "dark" : "");
-  radioClass += " " + (dimension || "medium");
-  radioClass += " " + (isMultiple ? "multiple" : "single");
+  const [classes] = useClasses("radio", props, false);
+
+  const radioClass = `${classes} ${isMultiple ? "multiple" : "single"}`;
 
   if (!isMultiple) {
     const [selected, setSelected] = useState<string>();
