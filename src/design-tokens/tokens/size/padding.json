@@ -1,0 +1,21 @@
+{
+    "size": {
+        "padding": {
+            "xsmall": {
+                "value": "0.5"
+            },
+            "small": {
+                "value": "1"
+            },
+            "medium": {
+                "value": "2"
+            },
+            "large": {
+                "value": "3"
+            },
+            "xlarge": {
+                "value": "4"
+            }
+        }
+    }
+}

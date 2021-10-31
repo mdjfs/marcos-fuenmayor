@@ -1,0 +1,26 @@
+@import "../../../design-tokens/build/scss/variables";
+
+.header {
+  position: relative;
+  font-family: $font-base-primary;
+  color: $color-font-primary;
+}
+
+.header.small {
+  letter-spacing: $size-general-xxsmall;
+  font-size: $size-general-large;
+}
+
+.header.medium {
+  letter-spacing: $size-general-xsmall;
+  font-size: $size-general-xlarge;
+}
+
+.header.large {
+  letter-spacing: $size-general-small;
+  font-size: $size-general-xxlarge;
+}
+
+.header.dark {
+  color: $color-base-primary-dark;
+}

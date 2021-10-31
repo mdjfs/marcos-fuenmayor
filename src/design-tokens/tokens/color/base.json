@@ -1,0 +1,72 @@
+{
+  "color": {
+    "base": {
+      "white": {
+        "value": "#ffffff"
+      },
+      "darkGrey": {
+        "value": "#202124"
+      },
+      "dangerRed": {
+        "value": "#fd4147d2"
+      },
+      "successGreen": {
+        "value": "#22bb33"
+      },
+      "warningYellow": {
+        "value": "#f0ad4e"
+      },
+      "infoBlue": {
+        "value": "#5bc0de"
+      },
+      "petrolGreen": {
+        "value": "#67dbc0"
+      },
+      "petrolGreenLight": {
+        "value": "#9cfff3"
+      },
+      "petrolGreenDark": {
+        "value": "#2ca990"
+      },
+      "blueGrey": {
+        "value": "#e2e2ff"
+      },
+      "blueGreyLight": {
+        "value": "#ffffff"
+      },
+      "blueGreyDark": {
+        "value": "#b0b0cc"
+      },
+      "primaryText": {
+        "value": "#000000"
+      },
+      "secondaryText": {
+        "value": "#000000"
+      },
+      "primary": {
+        "value": "{color.base.petrolGreen.value}"
+      },
+      "primaryLight": {
+        "value": "{color.base.petrolGreenLight.value}"
+      },
+      "primaryDark": {
+        "value": "{color.base.petrolGreenDark.value}"
+      },
+      "secondary": {
+        "value": "{color.base.blueGrey.value}"
+      },
+      "secondaryLight": {
+        "value": "{color.base.blueGreyLight.value}"
+      },
+      "secondaryDark": {
+        "value": "{color.base.blueGreyDark.value}"
+      },
+      "backgroundLight": {
+        "value": "{color.base.white.value}"
+      },
+      "backgroundDark": {
+        "value": "{color.base.darkGrey.value}"
+      }
+    }
+  }
+}

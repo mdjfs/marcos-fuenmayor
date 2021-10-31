@@ -1,0 +1,12 @@
+{
+    "font": {
+        "base": {
+            "lato": {
+                "value": "\"Lato\""
+            },
+            "primary": {
+                "value": "{font.base.lato.value}"
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import "../../../design-tokens/build/scss/variables";
+
+.input-primary,
+.input-secondary {
+  position: relative;
+  display: flex;
+  font-family: $font-base-primary;
+}
+
+.input-primary.small,
+.input-secondary.small {
+  border-radius: $size-general-medium;
+  border-style: solid;
+  padding: $size-general-small;
+  padding-left: $size-general-xsmall;
+  padding-right: $size-general-xsmall;
+  font-size: $size-font-small;
+}
+
+.input-primary.medium,
+.input-secondary.medium {
+  border-radius: $size-general-large;
+  border-style: solid;
+  padding: $size-general-medium;
+  padding-left: $size-general-small;
+  padding-right: $size-general-small;
+  font-size: $size-font-medium;
+}
+
+.input-primary.large,
+.input-secondary.large {
+  border-radius: $size-general-xlarge;
+  border-style: solid;
+  padding: $size-general-large;
+  padding-left: $size-general-medium;
+  padding-right: $size-general-medium;
+  font-size: $size-font-large;
+}
+
+.input-primary {
+  border-color: $color-base-primary;
+  color: $color-font-primary;
+  background-color: transparent;
+}
+
+.input-primary.dark {
+  border-color: $color-base-primary-light;
+  background-color: $color-base-primary-dark;
+  color: $color-base-primary-light;
+}
+
+.input-primary.dark::placeholder {
+  color: $color-base-primary-light;
+}
+
+.input-primary::placeholder {
+  color: $color-font-primary;
+  opacity: 0.6;
+}
+
+.input-primary:focus-visible {
+  outline-color: $color-base-primary;
+  outline-style: dotted;
+}
+
+.input-secondary {
+  border-color: $color-base-secondary;
+  outline-color: $color-base-secondary !important;
+  color: $color-font-secondary;
+  background-color: transparent;
+}
+
+.input-secondary.dark {
+  border-color: $color-base-secondary-light;
+  background-color: $color-base-secondary-dark;
+  color: $color-base-secondary-light;
+}
+
+.input-secondary.dark::placeholder {
+  color: $color-base-secondary-light;
+}
+
+.input-secondary::placeholder {
+  color: $color-font-secondary;
+  opacity: 0.6;
+}
+
+.input-secondary:focus-visible {
+  outline-color: $color-base-secondary;
+  outline-style: dotted;
+}
+
+.input-secondary::placeholder {
+  color: $color-font-secondary;
+  opacity: 0.6;
+}
+
+.input-primary.unmatched,
+.input-secondary.unmatched {
+  border-color: $color-base-danger-red;
+}

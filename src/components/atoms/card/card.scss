@@ -1,0 +1,33 @@
+@import "../../../design-tokens/build/scss/variables";
+
+.card {
+  position: relative;
+  background-color: $color-base-secondary-light;
+  display: inline-block;
+  box-shadow: 0 0 $size-general-xxsmall 0 $color-base-primary-dark;
+  font-family: $font-base-primary;
+}
+
+.card.dark {
+  background-color: $color-base-secondary-dark;
+  color: $color-base-background-light;
+  box-shadow: 0 0 $size-general-xxsmall 0 $color-base-background-light;
+}
+
+.card.small {
+  padding: $size-general-xsmall;
+  border-radius: $size-general-xsmall;
+  font-size: $size-font-small;
+}
+
+.card.medium {
+  padding: $size-general-small;
+  border-radius: $size-general-small;
+  font-size: $size-font-medium;
+}
+
+.card.large {
+  padding: $size-general-medium;
+  border-radius: $size-general-medium;
+  font-size: $size-font-large;
+}

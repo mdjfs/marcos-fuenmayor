@@ -1,0 +1,6 @@
+@import "../design-tokens/build/scss/variables";
+
+@font-face {
+  font-family: $font-base-lato;
+  src: url("/static/fonts/Lato-Regular.ttf") format("truetype");
+}

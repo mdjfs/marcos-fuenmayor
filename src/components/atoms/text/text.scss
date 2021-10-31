@@ -1,0 +1,28 @@
+@import "../../../design-tokens/build/scss/variables";
+
+.text {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: $font-base-primary;
+  color: $color-font-primary;
+}
+
+.text.small {
+  letter-spacing: 0;
+  font-size: $size-font-small;
+}
+
+.text.medium {
+  letter-spacing: $size-general-xxsmall;
+  font-size: $size-font-medium;
+}
+
+.text.large {
+  letter-spacing: $size-general-xsmall;
+  font-size: $size-font-large;
+}
+
+.text.dark {
+  color: $color-base-secondary-dark;
+}

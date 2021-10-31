@@ -1,0 +1,310 @@
+@import "../../../design-tokens/build/scss/variables";
+
+.select-primary,
+.select-secondary {
+  position: relative;
+}
+
+.select-primary .choice,
+.select-secondary .choice,
+.select-primary .selected,
+.select-secondary .selected {
+  font-family: $font-base-primary;
+}
+
+.select-primary.opened .input-primary,
+.select-primary.opened .input-secondary,
+.select-secondary.opened .input-primary,
+.select-secondary.opened .input-secondary {
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+}
+
+.select-primary .search,
+.select-secondary .search {
+  display: inline-flex;
+  position: relative;
+}
+
+.select-primary .selected,
+.select-secondary .selected {
+  z-index: 10;
+}
+
+.select-primary .search button:hover,
+.select-secondary .search button:hover {
+  opacity: 0.8;
+}
+
+.select-primary.opened .search button svg,
+.select-secondary.opened .search button svg {
+  animation: buttonToOpen 0.5s ease-in forwards;
+}
+
+.select-primary.closed .search button svg,
+.select-secondary.closed .search button svg {
+  animation: buttonToClose 0.5s ease-in forwards;
+}
+
+.select-primary .dropdown .choice:hover,
+.select-secondary .dropdown .choice:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.select-primary .dropdown .choice.hidden,
+.select-secondary .dropdown .choice.hidden {
+  display: none !important;
+}
+
+.select-primary.opened .dropdown,
+.select-secondary.opened .dropdown {
+  animation: openDropdown 0.5s ease-in forwards;
+}
+
+.select-primary.small .input-primary,
+.select-primary.small .input-secondary,
+.select-secondary.small .input-primary,
+.select-secondary.small .input-secondary {
+  padding-right: $size-general-large;
+  z-index: 5;
+}
+
+.select-primary.small .search button,
+.select-secondary.small .search button {
+  position: absolute;
+  top: $size-general-small;
+  right: $size-general-small;
+  background: none;
+  cursor: pointer;
+  border-radius: $size-general-xxsmall;
+  z-index: 10;
+  padding: 0;
+  font-size: $size-font-small;
+}
+
+.select-primary.small .dropdown,
+.select-secondary.small .dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 100%;
+  height: 0;
+  border-end-end-radius: $size-general-small;
+  border-end-start-radius: $size-general-small;
+  max-height: 500%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.select-primary.small .dropdown .choice,
+.select-secondary.small .dropdown .choice {
+  margin: $size-general-xsmall;
+  padding: $size-general-xsmall;
+  border-radius: $size-general-small;
+  font-size: $size-font-small;
+}
+
+.select-primary.small .selected,
+.select-secondary.small .selected {
+  position: absolute;
+  top: $size-general-small;
+  left: $size-general-small;
+  padding: $size-general-xxsmall;
+  border-radius: $size-general-xsmall;
+  font-size: $size-font-small;
+}
+
+.select-primary.medium .input-primary,
+.select-primary.medium .input-secondary,
+.select-secondary.medium .input-primary,
+.select-secondary.medium .input-secondary {
+  padding-right: $size-general-xlarge;
+  z-index: 5;
+}
+
+.select-primary.medium .search button,
+.select-secondary.medium .search button {
+  position: absolute;
+  top: $size-general-medium;
+  right: $size-general-medium;
+  background: none;
+  cursor: pointer;
+  border-radius: $size-general-xxsmall;
+  z-index: 10;
+  font-size: $size-font-medium;
+}
+
+.select-primary.medium .dropdown,
+.select-secondary.medium .dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 100%;
+  height: 0;
+  border-end-end-radius: $size-general-medium;
+  border-end-start-radius: $size-general-medium;
+  max-height: 500%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.select-primary.medium .dropdown .choice,
+.select-secondary.medium .dropdown .choice {
+  margin: $size-general-small;
+  padding: $size-general-small;
+  border-radius: $size-general-medium;
+  font-size: $size-font-medium;
+}
+
+.select-primary.medium .selected,
+.select-secondary.medium .selected {
+  position: absolute;
+  top: $size-general-medium;
+  left: $size-general-medium;
+  padding: $size-general-xsmall;
+  border-radius: $size-general-small;
+  font-size: $size-font-medium;
+}
+
+.select-primary.large .input-primary,
+.select-primary.large .input-secondary,
+.select-secondary.large .input-primary,
+.select-secondary.large .input-secondary {
+  padding-right: $size-general-xxlarge;
+  z-index: 5;
+}
+
+.select-primary.large .search button,
+.select-secondary.large .search button {
+  position: absolute;
+  top: $size-general-large;
+  right: $size-general-large;
+  background: none;
+  cursor: pointer;
+  border-radius: $size-general-xsmall;
+  z-index: 10;
+  font-size: $size-font-large;
+}
+
+.select-primary.large .dropdown,
+.select-secondary.large .dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 100%;
+  height: 0;
+  border-end-end-radius: $size-general-large;
+  border-end-start-radius: $size-general-large;
+  max-height: 500%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.select-primary.large .dropdown .choice,
+.select-secondary.large .dropdown .choice {
+  margin: $size-general-medium;
+  padding: $size-general-medium;
+  border-radius: $size-general-large;
+  font-size: $size-font-large;
+}
+
+.select-primary.large .selected,
+.select-secondary.large .selected {
+  position: absolute;
+  top: $size-general-large;
+  left: $size-general-large;
+  padding: $size-general-small;
+  border-radius: $size-general-medium;
+  font-size: $size-font-large;
+}
+
+.select-primary .dropdown .choice {
+  background-color: $color-base-primary-light;
+}
+
+.select-primary .dropdown {
+  background-color: $color-base-primary;
+}
+
+.select-primary .search button {
+  border: $size-general-xsmall solid $color-base-primary;
+  color: $color-base-primary;
+}
+
+.select-primary.dark .dropdown .choice {
+  background-color: $color-base-primary-light;
+}
+
+.select-primary.dark .dropdown {
+  background-color: $color-base-primary-dark;
+}
+
+.select-primary.dark .selected {
+  color: $color-base-primary-light;
+}
+
+.select-primary.dark .search button {
+  border: $size-general-xsmall solid $color-base-primary-light;
+  color: $color-base-primary-light;
+}
+
+.select-secondary .dropdown .choice {
+  background-color: $color-base-secondary-light;
+}
+
+.select-secondary .dropdown {
+  background-color: $color-base-secondary;
+}
+
+.select-secondary .search button {
+  border: $size-general-xsmall solid $color-base-secondary;
+  color: $color-base-secondary;
+}
+
+.select-secondary.dark .dropdown .choice {
+  background-color: $color-base-secondary-light;
+}
+
+.select-secondary.dark .dropdown {
+  background-color: $color-base-secondary-dark;
+}
+
+.select-secondary.dark .selected {
+  color: $color-base-secondary-light;
+}
+
+.select-secondary.dark .search button {
+  border: $size-general-xsmall solid $color-base-secondary-light;
+  color: $color-base-secondary-light;
+}
+
+@keyframes buttonToOpen {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-180deg);
+  }
+}
+
+@keyframes buttonToClose {
+  0% {
+    transform: rotateZ(-180deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes openDropdown {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: var(--dropdown-height);
+  }
+}

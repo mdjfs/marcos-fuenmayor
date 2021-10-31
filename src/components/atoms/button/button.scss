@@ -1,0 +1,120 @@
+@import "../../../design-tokens/build/scss/variables";
+
+.button-primary,
+.button-secondary {
+  position: relative;
+  cursor: pointer;
+  font-family: $font-base-primary;
+}
+
+.button-primary.large,
+.button-secondary.large {
+  padding-top: $size-padding-medium;
+  padding-bottom: $size-padding-medium;
+  padding-left: $size-padding-large;
+  padding-right: $size-padding-large;
+  font-size: $size-font-large;
+  border: $size-general-small solid;
+  border-radius: $size-general-xxlarge;
+  border-color: transparent;
+}
+
+.button-primary.medium,
+.button-secondary.medium {
+  padding-top: $size-padding-small;
+  padding-bottom: $size-padding-small;
+  padding-left: $size-padding-medium;
+  padding-right: $size-padding-medium;
+  font-size: $size-font-medium;
+  border: $size-general-xsmall solid;
+  border-radius: $size-general-large;
+  border-color: transparent;
+}
+
+.button-primary.small,
+.button-secondary.small {
+  padding-top: $size-padding-xsmall;
+  padding-bottom: $size-padding-xsmall;
+  padding-left: $size-padding-small;
+  padding-right: $size-padding-small;
+  font-size: $size-font-small;
+  border: $size-general-xxsmall solid;
+  border-color: transparent;
+  border-radius: $size-general-medium;
+}
+
+.button-primary {
+  background-color: $color-base-primary;
+  color: $color-font-primary;
+}
+
+.button-primary.dark {
+  background-color: $color-base-primary-dark;
+  color: $color-base-primary-light;
+}
+
+.button-secondary {
+  background-color: $color-base-secondary;
+  color: $color-font-secondary;
+}
+
+.button-secondary.dark {
+  background-color: $color-base-secondary-dark;
+  color: $color-base-secondary-light;
+}
+
+.button-primary:hover:after,
+.button-secondary:hover:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: $size-general-large;
+  opacity: 0.2;
+}
+
+.button-primary.large:hover:after,
+.button-secondary.large:hover:after,
+.button-primary.large:focus:after,
+.button-secondary.large:focus:after {
+  border-radius: $size-general-xlarge;
+}
+
+.button-primary:hover:after,
+.button-primary:focus:after {
+  background-color: $color-base-primary-light;
+}
+
+.button-secondary:hover:after,
+.button-secondary:focus:after {
+  background-color: $color-base-primary-light;
+}
+
+.button-primary:focus:after,
+.button-secondary:focus:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  opacity: 0.2;
+  border-radius: $size-general-large;
+  animation: press 0.5s ease-in forwards;
+}
+
+@keyframes press {
+  0% {
+    width: 30%;
+    left: 30%;
+    opacity: 0.2;
+  }
+  20% {
+    width: 100%;
+    left: 0%;
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../design-tokens/build/scss/variables";
+
+.alink-primary,
+.alink-secondary {
+  position: relative;
+  cursor: pointer;
+  font-family: $font-base-primary;
+  text-decoration-line: underline;
+  font-weight: bold;
+}
+
+.alink-primary:hover,
+.alink-secondary:hover {
+  text-decoration-line: none;
+}
+
+.alink-primary.small,
+.alink-secondary.small {
+  font-size: $size-font-small;
+}
+
+.alink-primary.medium,
+.alink-secondary.medium {
+  font-size: $size-font-medium;
+}
+
+.alink-primary.large,
+.alink-secondary.large {
+  font-size: $size-font-large;
+}
+
+.alink-primary {
+  color: $color-base-primary;
+}
+
+.alink-primary.dark {
+  color: $color-base-primary-dark;
+}
+
+.alink-secondary {
+  color: $color-base-secondary;
+}
+
+.alink-secondary.dark {
+  color: $color-base-secondary-dark;
+}

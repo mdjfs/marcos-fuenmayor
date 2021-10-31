@@ -1,0 +1,12 @@
+{
+  "color": {
+    "font": {
+      "primary": {
+        "value": "{color.base.primaryText.value}"
+      },
+      "secondary": {
+        "value": "{color.base.secondaryText.value}"
+      }
+    }
+  }
+}

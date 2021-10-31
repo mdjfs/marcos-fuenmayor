@@ -1,0 +1,194 @@
+@import "../../../design-tokens/build/scss/variables";
+
+.toggle-primary,
+.toggle-secondary {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.toggle-primary *,
+.toggle-secondary * {
+  font-family: $font-base-primary;
+}
+
+.toggle-primary.small button,
+.toggle-secondary.small button {
+  position: absolute;
+  padding: $size-general-xsmall;
+  font-size: $size-font-small;
+}
+
+.toggle-primary.small div,
+.toggle-secondary.small div {
+  padding: $size-general-xsmall;
+  font-size: $size-font-small;
+}
+
+.toggle-primary.small button,
+.toggle-secondary.small button {
+  border: none;
+  border-radius: $size-general-xsmall;
+  font-weight: bolder;
+  z-index: 2;
+}
+
+.toggle-primary.small div:nth-child(2),
+.toggle-secondary.small div:nth-child(2) {
+  opacity: 0.5;
+  border-end-start-radius: $size-general-xsmall;
+  border-start-start-radius: $size-general-xsmall;
+  padding-right: $size-general-small;
+}
+
+.toggle-primary.small div:nth-child(3),
+.toggle-secondary.small div:nth-child(3) {
+  opacity: 0.5;
+  border-end-end-radius: $size-general-xsmall;
+  border-start-end-radius: $size-general-xsmall;
+  padding-left: $size-general-small;
+}
+
+.toggle-primary.medium button,
+.toggle-secondary.medium button {
+  position: absolute;
+  padding: $size-general-small;
+  font-size: $size-font-medium;
+}
+
+.toggle-primary.medium div,
+.toggle-secondary.medium div {
+  padding: $size-general-small;
+  font-size: $size-font-medium;
+}
+
+.toggle-primary.medium button,
+.toggle-secondary.medium button {
+  border: none;
+  border-radius: $size-general-small;
+  font-weight: bolder;
+  z-index: 2;
+}
+
+.toggle-primary.medium div:nth-child(2),
+.toggle-secondary.medium div:nth-child(2) {
+  opacity: 0.5;
+  border-end-start-radius: $size-general-small;
+  border-start-start-radius: $size-general-small;
+  padding-right: $size-general-medium;
+}
+
+.toggle-primary.medium div:nth-child(3),
+.toggle-secondary.medium div:nth-child(3) {
+  opacity: 0.5;
+  border-end-end-radius: $size-general-small;
+  border-start-end-radius: $size-general-small;
+  padding-left: $size-general-medium;
+}
+
+.toggle-primary.large button,
+.toggle-secondary.large button {
+  position: absolute;
+  padding: $size-general-medium;
+  font-size: $size-font-large;
+}
+
+.toggle-primary.large div,
+.toggle-secondary.large div {
+  padding: $size-general-medium;
+  font-size: $size-font-large;
+}
+
+.toggle-primary.large button,
+.toggle-secondary.large button {
+  border: none;
+  border-radius: $size-general-medium;
+  font-weight: bolder;
+  z-index: 2;
+}
+
+.toggle-primary.large div:nth-child(2),
+.toggle-secondary.large div:nth-child(2) {
+  opacity: 0.5;
+  border-end-start-radius: $size-general-medium;
+  border-start-start-radius: $size-general-medium;
+  padding-right: $size-general-large;
+}
+
+.toggle-primary.large div:nth-child(3),
+.toggle-secondary.large div:nth-child(3) {
+  opacity: 0.5;
+  border-end-end-radius: $size-general-medium;
+  border-start-end-radius: $size-general-medium;
+  padding-left: $size-general-large;
+}
+
+.toggle-primary button {
+  background-color: $color-base-primary;
+  box-shadow: 0 0 $size-general-small 0 $color-base-primary;
+}
+
+.toggle-primary div {
+  background-color: $color-base-secondary;
+  color: $color-font-primary;
+}
+
+.toggle-secondary button {
+  background-color: $color-base-secondary;
+  box-shadow: 0 0 $size-general-small 0 $color-base-secondary;
+}
+
+.toggle-secondary div {
+  background-color: $color-base-secondary;
+  color: $color-font-secondary;
+}
+
+.toggle-primary.dark button {
+  background-color: $color-base-primary-dark;
+  box-shadow: 0 0 $size-general-small 0 $color-base-primary-dark;
+  color: $color-base-secondary-light;
+}
+
+.toggle-primary.dark div {
+  background-color: $color-base-secondary-dark;
+  color: $color-base-secondary-light;
+}
+
+.toggle-secondary.dark button {
+  background-color: $color-base-secondary-dark;
+  box-shadow: 0 0 $size-general-small 0 $color-base-secondary-dark;
+  color: $color-base-secondary-light;
+}
+
+.toggle-secondary.dark div {
+  background-color: $color-base-secondary-dark;
+  color: $color-base-primary-light;
+}
+
+.toggle-primary.left button,
+.toggle-secondary.left button {
+  animation: toleft ease-in 0.5s forwards;
+}
+
+.toggle-primary.right button,
+.toggle-secondary.right button {
+  animation: toright ease-in 0.5s forwards;
+}
+
+@keyframes toleft {
+  0% {
+    left: 60%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes toright {
+  0% {
+    right: 60%;
+  }
+  100% {
+    right: 0%;
+  }
+}
