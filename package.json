@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx webpack --mode production",
     "start": "npx webpack serve --mode development",
-    "style-build": "cd ./src/design-tokens && npx style-dictionary build && cd ../..",
+    "style-build": "cd ./src/subatoms && npx style-dictionary build && cd ../..",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public"
   },
@@ -47,6 +47,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-inlinesvg": "^2.3.0",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2"
   }

@@ -3,7 +3,7 @@ import { CardProps } from "./card.interfaces";
 import "./card.scss";
 
 const Card = (props: CardProps) => {
-  const [classes] = useClasses("card", props, false);
+  const [classes] = useClasses("card", { props });
   return <div className={classes}>{props.content}</div>;
 };
 

@@ -1,7 +1,7 @@
 import { BiThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
 export interface ToggleProps extends BiThemedComponent {
-  left: string;
-  right: string;
-  onToggle: (status: boolean) => void;
+  left: string | JSX.Element;
+  right: string | JSX.Element;
+  onToggle?: (status: boolean) => void;
 }

@@ -3,7 +3,10 @@ import { ButtonProps } from "./button.interfaces";
 import "./button.scss";
 
 const Button = (props: ButtonProps) => {
-  const [classes, inherited] = useClasses("button", props);
+  const [classes, inherited] = useClasses("button", {
+    props,
+    IsBiThemed: true,
+  });
   return (
     <button className={classes} {...inherited}>
       {props.content}

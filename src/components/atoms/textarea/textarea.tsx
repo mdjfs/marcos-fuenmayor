@@ -6,7 +6,10 @@ import "./textarea.scss";
 const TextArea = ({ onType, matchRegex, ...props }: TextAreaProps) => {
   const [isMatched, setIsMatched] = useState(true);
 
-  const [classes, inherited] = useClasses("textarea", props);
+  const [classes, inherited] = useClasses("textarea", {
+    props,
+    IsBiThemed: true,
+  });
   const matched = isMatched ? "matched" : "unmatched";
   const inputClass = classes + " " + matched;
 

@@ -1,0 +1,94 @@
+@import "../../../subatoms/build/scss/variables";
+
+.hero {
+  position: relative;
+  max-width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.hero .background {
+  position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+}
+
+.hero .grid {
+  padding-top: $size-general-xxlarge;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero .grid > * {
+  width: calc(100% - $size-general-large);
+  text-align: left;
+}
+
+.hero .grid .header {
+  padding: $size-general-small;
+  margin-left: $size-general-small;
+  animation: text-show 0.75s ease-in forwards;
+}
+
+.hero .grid .text {
+  padding: $size-general-small;
+  margin-left: $size-general-small;
+  text-align: left;
+}
+
+.hero .grid > .text {
+  animation: text-show 1.5s ease-in forwards;
+}
+
+.hero .grid .text * {
+  margin-right: $size-general-small;
+  margin-left: $size-general-small;
+}
+
+.hero .svg-background {
+  --left-color: #{$color-base-primary};
+  --right-color: #{$color-base-secondary};
+  background-color: $color-base-background-light !important;
+}
+
+.hero.dark .svg-background {
+  --left-color: #{$color-base-primary-dark};
+  --right-color: #{$color-base-secondary-dark};
+  background-color: $color-base-background-dark !important;
+}
+
+.hero .actions > * {
+  margin: $size-general-small;
+  animation: text-show 3s ease-in forwards;
+}
+
+@keyframes text-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero .svg-background {
+    width: 200vw !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero .svg-background {
+    width: 350vw !important;
+  }
+}

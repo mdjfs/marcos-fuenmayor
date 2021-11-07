@@ -1,0 +1,80 @@
+@import "../../../subatoms/build/scss/variables";
+
+.navigator {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.navigator.scrolled {
+  background-color: $color-base-background-light;
+}
+.navigator.dark.scrolled {
+  background-color: $color-base-background-dark;
+}
+
+.navigator.top .alink-secondary {
+  color: $color-base-background-light;
+}
+
+.navigator .logo {
+  width: $size-general-large;
+  height: $size-general-large;
+  border: $size-general-xxsmall solid $color-base-secondary;
+  border-radius: $size-general-large;
+  margin: $size-general-small;
+  align-items: center;
+  display: flex;
+}
+
+.navigator .logo .text {
+  font-size: $size-general-medium;
+  color: $color-base-secondary;
+  text-align: center;
+  width: 100%;
+}
+
+.navigator .content {
+  display: flex;
+  align-items: baseline;
+}
+
+.navigator .content > * {
+  align-self: center;
+  margin-left: $size-general-medium;
+  margin-right: $size-general-medium;
+}
+
+.navigator .content .hamburguer {
+  color: $color-base-secondary;
+  font-size: $size-general-large;
+  cursor: pointer;
+}
+
+.navigator .links {
+  position: fixed;
+  right: $size-general-medium;
+  text-align: center;
+  top: $size-general-xlarge;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+  background-color: $color-base-background-light;
+  padding: $size-general-medium;
+  border-radius: $size-general-medium;
+  box-shadow: 0 0 $size-general-small 0 $color-base-primary-light;
+}
+
+.navigator .links > * {
+  padding: $size-general-small;
+  color: $color-base-secondary !important;
+}
+
+.navigator.dark .links {
+  background-color: $color-base-background-dark;
+  box-shadow: 0 0 $size-general-small 0 $color-base-primary-dark;
+}

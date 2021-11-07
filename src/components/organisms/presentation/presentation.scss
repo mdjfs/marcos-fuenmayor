@@ -1,0 +1,38 @@
+@import "../../../subatoms/build/scss/variables";
+
+.presentation {
+  padding: $size-general-xxlarge;
+  background-color: $color-base-background-light;
+}
+
+.presentation.dark {
+  background-color: $color-base-background-dark;
+}
+
+.presentation .header {
+  width: 100%;
+  text-align: center;
+}
+
+.presentation > .text {
+  padding: $size-general-xxlarge;
+}
+
+@media (max-width: 900px) {
+  .presentation {
+    padding: $size-general-xlarge;
+  }
+
+  .presentation > .text {
+    padding: $size-general-medium;
+  }
+}
+
+@media (max-width: 500px) {
+  .presentation {
+    padding: $size-general-large;
+  }
+  .presentation > .text {
+    padding: $size-general-small;
+  }
+}

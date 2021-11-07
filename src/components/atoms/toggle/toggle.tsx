@@ -5,7 +5,7 @@ import "./toggle.scss";
 
 const Toggle = ({ left, right, onToggle, ...props }: ToggleProps) => {
   const [status, setStatus] = useState(true);
-  const [classes] = useClasses("toggle", props);
+  const [classes] = useClasses("toggle", { props, IsBiThemed: true });
   const direction = status ? "left" : "right";
   const toggleClass = classes + " " + direction;
 

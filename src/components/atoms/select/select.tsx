@@ -10,7 +10,7 @@ const Select = ({ onSelectChoice, choices, ...props }: SelectProps) => {
   const [filtered, setFiltered] = useState<Array<string>>();
   const [choice, setChoice] = useState<Choice>();
   const firstRender = isOpen === undefined;
-  const [classes] = useClasses("select", props);
+  const [classes] = useClasses("select", { props, IsBiThemed: true });
   const status = firstRender ? "" : isOpen ? "opened" : "closed";
   const selectClass = classes + " " + status;
 

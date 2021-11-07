@@ -10,7 +10,7 @@ const Radio = ({
   isMultiple,
   ...props
 }: RadioProps) => {
-  const [classes] = useClasses("radio", props, false);
+  const [classes] = useClasses("radio", { props });
 
   const radioClass = `${classes} ${isMultiple ? "multiple" : "single"}`;
 

@@ -5,7 +5,7 @@ import "./input.scss";
 
 const Input = ({ onType, matchRegex, type, ...props }: InputProps) => {
   const [isMatched, setIsMatched] = useState(true);
-  const [classes, inherited] = useClasses("input", props);
+  const [classes, inherited] = useClasses("input", { props, IsBiThemed: true });
 
   function listener(e: ChangeEvent<HTMLInputElement>) {
     if (onType) {

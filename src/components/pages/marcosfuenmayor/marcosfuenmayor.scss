@@ -1,0 +1,11 @@
+@import "../../../subatoms/build/scss/variables";
+
+body {
+  background-color: $color-base-background-light;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body.dark {
+  background-color: $color-base-background-dark;
+}

@@ -43,23 +43,50 @@
       "secondaryText": {
         "value": "#000000"
       },
+      "blueGreen": {
+        "value": "#34ebb7"
+      },
+      "whiteGreen": {
+        "value": "#daf2eb"
+      },
+      "darkGreen": {
+        "value": "#1c1f1e"
+      },
+      "whiteYellow": {
+        "value": "#d4ff8f"
+      },
+      "darkYellow": {
+        "value": "#303b20"
+      },
+      "lightYellow": {
+        "value": "#dbe3cf"
+      },
+      "whiteBlue": {
+        "value": "#b0f5f3"
+      },
+      "lightBlue": {
+        "value": "#ffffff"
+      },
+      "darkBlue": {
+        "value": "#131f1e"
+      },
       "primary": {
-        "value": "{color.base.petrolGreen.value}"
+        "value": "{color.base.blueGreen.value}"
       },
       "primaryLight": {
-        "value": "{color.base.petrolGreenLight.value}"
+        "value": "{color.base.whiteGreen.value}"
       },
       "primaryDark": {
-        "value": "{color.base.petrolGreenDark.value}"
+        "value": "{color.base.darkGreen.value}"
       },
       "secondary": {
-        "value": "{color.base.blueGrey.value}"
+        "value": "{color.base.whiteBlue.value}"
       },
       "secondaryLight": {
-        "value": "{color.base.blueGreyLight.value}"
+        "value": "{color.base.lightBlue.value}"
       },
       "secondaryDark": {
-        "value": "{color.base.blueGreyDark.value}"
+        "value": "{color.base.darkBlue.value}"
       },
       "backgroundLight": {
         "value": "{color.base.white.value}"

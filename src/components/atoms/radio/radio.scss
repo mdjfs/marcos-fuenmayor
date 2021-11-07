@@ -107,3 +107,26 @@
   box-shadow: 0 0 $size-general-small 0 $color-base-primary-light;
   color: $color-font-primary;
 }
+
+.radio.single.dark .choice button {
+  background-color: $color-base-primary-dark;
+  box-shadow: 0 0 $size-general-small 0 $color-base-primary-dark;
+}
+
+.radio.single.dark .choice {
+  color: $color-base-primary-light;
+}
+
+.radio.single.dark .choice.selected button {
+  border-color: $color-base-primary-light;
+}
+
+.radio.multiple.dark .choice {
+  color: $color-base-primary-light;
+}
+
+.radio.multiple.dark .choice button {
+  background-color: $color-base-primary-dark;
+  box-shadow: 0 0 $size-general-small 0 $color-base-primary-dark;
+  color: $color-base-primary-light;
+}

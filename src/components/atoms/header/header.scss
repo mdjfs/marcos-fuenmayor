@@ -8,19 +8,19 @@
 
 .header.small {
   letter-spacing: $size-general-xxsmall;
-  font-size: $size-general-large;
+  font-size: $size-general-medium;
 }
 
 .header.medium {
   letter-spacing: $size-general-xsmall;
-  font-size: $size-general-xlarge;
+  font-size: $size-general-large;
 }
 
 .header.large {
   letter-spacing: $size-general-small;
-  font-size: $size-general-xxlarge;
+  font-size: $size-general-xlarge;
 }
 
 .header.dark {
-  color: $color-base-primary-dark;
+  color: $color-base-primary-light;
 }
