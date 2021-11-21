@@ -17,3 +17,13 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (orientation: portrait) {
+  .tech .tech-header {
+    width: 96%;
+    padding: 2%;
+  }
+  .tech .tech-header h1.large {
+    font-size: $size-general-large;
+  }
+}

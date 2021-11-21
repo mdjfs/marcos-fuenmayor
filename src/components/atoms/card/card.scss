@@ -14,6 +14,10 @@
   box-shadow: 0 0 $size-general-xxsmall 0 $color-base-background-light;
 }
 
+.card.dark * {
+  color: $color-base-background-light;
+}
+
 .card.small {
   padding: $size-general-xsmall;
   border-radius: $size-general-xsmall;

@@ -1,13 +1,15 @@
+import { FC } from "react";
+import { Link } from "react-router-dom";
 import { useBiThemedClasses } from "../../../hooks/useClasses";
 import { ALinkProps } from "./alink.interfaces";
 import "./alink.scss";
 
-const ALink = (props: ALinkProps) => {
-  const classes = useBiThemedClasses(props, "alink");
+const ALink: FC<ALinkProps> = ({ isPrimary, isDark, dimension, ...props }) => {
+  const classes = useBiThemedClasses({ isPrimary, isDark, dimension }, "alink");
   return (
-    <a {...props} className={classes}>
+    <Link {...props} className={classes}>
       {props.children}
-    </a>
+    </Link>
   );
 };
 

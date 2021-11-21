@@ -18,6 +18,51 @@
   padding: $size-general-xxlarge;
 }
 
+.presentation .card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.presentation .card .photo-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  .photobg,
+  .photo {
+    width: auto;
+    height: auto;
+  }
+
+  .photobg {
+    position: absolute;
+    height: 100%;
+  }
+
+  .photo {
+    width: 80%;
+    left: 10%;
+    position: relative;
+  }
+}
+
+.presentation .card .badges {
+  margin-top: $size-general-large;
+  margin-bottom: $size-general-large;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: $size-general-medium;
+}
+
+.presentation .card .badges > * {
+  text-align: center;
+}
+
+.presentation .card .data {
+  padding-bottom: $size-general-large;
+}
+
 @media (max-width: 900px) {
   .presentation {
     padding: $size-general-xlarge;
@@ -34,5 +79,29 @@
   }
   .presentation > .text {
     padding: $size-general-small;
+  }
+}
+
+@media (orientation: portrait) {
+  .presentation .card {
+    grid-template-columns: 1fr;
+  }
+
+  .presentation .card .photo-container {
+    width: 100%;
+
+    position: relative;
+
+    .photo {
+      position: relative;
+      width: 80%;
+      left: 10%;
+    }
+
+    .photobg {
+      position: absolute;
+
+      width: 100%;
+    }
   }
 }

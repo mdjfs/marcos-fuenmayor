@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoMenuOutline, IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { useDispatch } from "react-redux";
-import { useThemedClasses } from "../../../hooks/useClasses";
+import { isGlobalDark, useThemedClasses } from "../../../hooks/useClasses";
 import {
   SET_DARK_MODE,
   SET_LIGHT_MODE,
@@ -17,6 +17,7 @@ export const Navigator = () => {
   const [isPortrait, setIsPortrait] = useState<boolean>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dispatch = useDispatch();
+  const isDark = isGlobalDark();
 
   const handleScroll = () => {
     if (document.scrollingElement) {
@@ -50,14 +51,14 @@ export const Navigator = () => {
   className += isPortrait ? " portrait" : " landscape";
 
   const links = [
-    <ALink isPrimary={false} key="inicio">
+    <ALink isPrimary={false} key="Inicio" to="/">
       Inicio
     </ALink>,
-    <ALink isPrimary={false} key="opciones">
-      Opciones
+    <ALink isPrimary={false} key="Acerca de mi" to="/about">
+      Acerca de mi
     </ALink>,
-    <ALink isPrimary={false} key="contacto">
-      Contacto
+    <ALink isPrimary={false} key="Soluciones" to="/solutions">
+      Soluciones
     </ALink>,
   ];
 
@@ -73,6 +74,7 @@ export const Navigator = () => {
             left={<IoSunnyOutline />}
             right={<IoMoonOutline />}
             onToggle={handleToggle}
+            defaultStatus={!isDark}
             isPrimary={false}
           />
         )}
@@ -88,6 +90,7 @@ export const Navigator = () => {
             right={<IoMoonOutline />}
             onToggle={handleToggle}
             isPrimary={false}
+            defaultStatus={!isDark}
           />
         )}
       </div>

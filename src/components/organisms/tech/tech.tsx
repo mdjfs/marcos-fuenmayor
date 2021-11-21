@@ -1,4 +1,4 @@
-import { FaAngular, FaPython, FaReact } from "react-icons/fa";
+import { FaAngular, FaGithub, FaPython, FaReact } from "react-icons/fa";
 import { IoLogoIonic } from "react-icons/io";
 import {
   IoLogoElectron,
@@ -16,7 +16,15 @@ export const Tech = () => {
   return (
     <div className={className}>
       <div className="tech-header">
-        <Header dimension="small">¿Eres programador?</Header>
+        <Header dimension="small">
+          ¿Eres programador?{" "}
+          <FaGithub
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              window.open("https://github.com/mdjfs", "_blank");
+            }}
+          />
+        </Header>
         <Header dimension="large">Stack de tecnologías</Header>
       </div>
       <div className="stacks">

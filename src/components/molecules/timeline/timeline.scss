@@ -14,17 +14,24 @@
   color: $color-base-secondary-light;
 }
 
+.timeline .line .icon * {
+  color: $color-base-secondary-light;
+}
+
 .timeline .line .content {
   color: $color-font-primary;
 }
 
 .timeline .separator {
   background-color: $color-base-primary;
+
+  z-index: 0;
 }
 
 .timeline.dark .line .icon {
   background-color: $color-base-primary-dark;
   color: $color-base-secondary-light;
+  z-index: 1;
 }
 
 .timeline.dark .line .content {
@@ -46,13 +53,12 @@
 }
 
 .timeline.small .separator {
-  padding-top: $size-general-xlarge;
-  padding-bottom: $size-general-xlarge;
+  padding-top: $size-general-large;
+  padding-bottom: $size-general-large;
   width: $size-general-xsmall;
   left: $size-general-small;
   margin-top: -1%;
   margin-bottom: -1%;
-  z-index: -1;
   position: relative;
 }
 
@@ -73,7 +79,6 @@
   left: $size-general-medium;
   margin-top: -1%;
   margin-bottom: -1%;
-  z-index: -1;
   position: relative;
 }
 
@@ -94,6 +99,5 @@
   left: $size-general-large;
   margin-top: -1%;
   margin-bottom: -1%;
-  z-index: -1;
   position: relative;
 }

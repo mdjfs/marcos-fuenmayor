@@ -3,18 +3,27 @@ import { useBiThemedClasses } from "../../../hooks/useClasses";
 import { ToggleProps } from "./toggle.interfaces";
 import "./toggle.scss";
 
-const Toggle = ({ left, right, onToggle, ...props }: ToggleProps) => {
-  const [status, setStatus] = useState(true);
+const Toggle = ({
+  left,
+  right,
+  onToggle,
+  defaultStatus,
+  ...props
+}: ToggleProps) => {
+  const [status, setStatus] = useState<boolean>(
+    defaultStatus !== undefined ? defaultStatus : true
+  );
   const classes = useBiThemedClasses(props, "toggle");
   const direction = status ? "left" : "right";
   const toggleClass = classes + " " + direction;
 
-  useEffect(() => {
-    if (onToggle) onToggle(status);
-  }, [status]);
+  const toggle = () => {
+    setStatus(!status);
+    if (onToggle) onToggle(!status);
+  };
 
   return (
-    <div className={toggleClass} onClick={() => setStatus(!status)}>
+    <div className={toggleClass} onClick={toggle}>
       <button>{status ? left : right}</button>
       <div>{left}</div>
       <div>{right}</div>

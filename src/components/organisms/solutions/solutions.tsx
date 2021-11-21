@@ -13,9 +13,12 @@ import {
   ColorBaseSuccessGreen,
   ColorBaseWarningYellow,
 } from "../../../subatoms/build/ts/variables";
+import { useNavigate } from "react-router";
 
 export const Solutions = () => {
   const className = useThemedClasses({}, "solutions");
+  const navigation = useNavigate();
+  const goToSolutions = () => navigation("/solutions");
   return (
     <div className={className}>
       <div className="platforms">
@@ -25,21 +28,21 @@ export const Solutions = () => {
           </Header>
         </div>
         <div className="device-solutions">
-          <div className="desktop">
+          <div className="desktop" onClick={goToSolutions}>
             <img
               src="/static/png/desktop_presentation.png"
               alt="Desktop Solutions"
             />
             <Header>Escritorio</Header>
           </div>
-          <div className="mobile">
+          <div className="mobile" onClick={goToSolutions}>
             <img
               src="/static/png/mobile_presentation.png"
               alt="Mobile Solutions"
             />
             <Header>Móviles</Header>
           </div>
-          <div className="web">
+          <div className="web" onClick={goToSolutions}>
             <img src="/static/png/web_presentation.png" alt="Web Solutions" />
             <Header>Navegador</Header>
           </div>

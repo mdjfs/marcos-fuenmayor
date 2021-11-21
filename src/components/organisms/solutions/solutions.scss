@@ -105,3 +105,13 @@
     transform: scale(1.05);
   }
 }
+
+@media (orientation: portrait) {
+  .solutions .solutions-header {
+    width: 96%;
+    padding: 2%;
+  }
+  .solutions .solutions-header h1.large {
+    font-size: $size-general-large;
+  }
+}

@@ -15,14 +15,11 @@
   background-color: $color-base-background-dark;
 }
 
-.navigator.top .alink-secondary {
-  color: $color-base-background-light;
-}
-
 .navigator .logo {
   width: $size-general-large;
   height: $size-general-large;
-  border: $size-general-xxsmall solid $color-base-secondary;
+  border-style: solid;
+  border-width: $size-general-xxsmall;
   border-radius: $size-general-large;
   margin: $size-general-small;
   align-items: center;
@@ -31,9 +28,24 @@
 
 .navigator .logo .text {
   font-size: $size-general-medium;
-  color: $color-base-secondary;
   text-align: center;
   width: 100%;
+}
+
+.navigator:not(.dark) .alink-secondary {
+  color: $color-font-primary;
+}
+
+.navigator:not(.dark) .logo {
+  border-color: $color-font-primary;
+}
+
+.navigator:not(.dark) .logo .text {
+  color: $color-font-primary;
+}
+
+.navigator.dark .logo {
+  border-color: $color-base-secondary-light;
 }
 
 .navigator .content {
