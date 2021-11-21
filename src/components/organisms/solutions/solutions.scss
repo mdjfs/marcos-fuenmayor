@@ -1,0 +1,107 @@
+@import "../../../subatoms/build/scss/variables";
+
+.solutions > div {
+  padding-top: $size-general-xxlarge;
+  padding-bottom: $size-general-xxlarge;
+}
+
+.solutions .device-solutions {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  margin-top: $size-general-xxlarge;
+  margin-bottom: $size-general-xxlarge;
+}
+
+.solutions .solutions-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: $size-general-xxlarge;
+}
+
+.solutions .device-solutions .web,
+.solutions .device-solutions .desktop,
+.solutions .device-solutions .mobile {
+  position: relative;
+  text-align: center;
+
+  img {
+    width: 80%;
+    margin: auto;
+    animation: deviceMove 5s ease-in infinite;
+    cursor: pointer;
+    &:hover {
+      animation: deviceScale 1s ease-in forwards;
+    }
+  }
+  .header {
+    display: inline-block;
+    padding: $size-general-medium;
+    border-radius: $size-general-medium;
+    background-color: $color-base-primary;
+  }
+}
+
+.solutions.dark .device-solutions .web,
+.solutions.dark .device-solutions .desktop,
+.solutions.dark .device-solutions .mobile {
+  .header {
+    background-color: $color-base-primary-dark;
+  }
+}
+
+.solutions .device-solutions .web,
+.solutions .device-solutions .desktop {
+  width: 40%;
+}
+
+.solutions .device-solutions .mobile {
+  width: 20%;
+}
+
+.solutions .timeline-container {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+@media (orientation: portrait) {
+  .solutions .device-solutions {
+    display: grid;
+  }
+  .solutions .device-solutions .web,
+  .solutions .device-solutions .desktop {
+    width: 100%;
+    margin-top: $size-general-xxlarge;
+    margin-bottom: $size-general-xxlarge;
+  }
+
+  .solutions .device-solutions .mobile {
+    width: 50%;
+    margin: auto;
+    margin-top: $size-general-xxlarge;
+    margin-bottom: $size-general-xxlarge;
+  }
+}
+
+@keyframes deviceMove {
+  0% {
+    transform: translateX(0%) translateY(0%);
+  }
+  50% {
+    transform: translateX(1%) translateY(1%);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%);
+  }
+}
+
+@keyframes deviceScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}

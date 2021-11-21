@@ -1,14 +1,17 @@
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useThemedClasses } from "../../../hooks/useClasses";
 import ALink from "../../atoms/alink/alink";
 import Header from "../../atoms/header/header";
 import Text from "../../atoms/text/text";
 import "./presentation.scss";
 
 export const Presentation = () => {
-  const [className] = useClasses("presentation");
-  return (
-    <div className={className}>
-      <Header content="Hola, mi nombre es Marcos Fuenmayor" />
+  const className = useThemedClasses({}, "presentation");
+  return <div className={className}></div>;
+};
+
+export default Presentation;
+
+/* <Header content="Hola, mi nombre es Marcos Fuenmayor" />
       <Text
         content={
           <>
@@ -53,9 +56,4 @@ export const Presentation = () => {
             />
           </>
         }
-      />
-    </div>
-  );
-};
-
-export default Presentation;
+      /> */

@@ -1,12 +1,12 @@
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useBiThemedClasses } from "../../../hooks/useClasses";
 import { ALinkProps } from "./alink.interfaces";
 import "./alink.scss";
 
 const ALink = (props: ALinkProps) => {
-  const [classes, inherit] = useClasses("alink", { props, IsBiThemed: true });
+  const classes = useBiThemedClasses(props, "alink");
   return (
-    <a className={classes} {...inherit}>
-      {props.content}
+    <a {...props} className={classes}>
+      {props.children}
     </a>
   );
 };

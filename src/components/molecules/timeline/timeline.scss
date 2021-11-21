@@ -1,0 +1,99 @@
+@import "../../../subatoms/build/scss/variables";
+
+.timeline {
+  display: grid;
+}
+
+.timeline .line {
+  display: inline-flex;
+  align-items: center;
+}
+
+.timeline .line .icon {
+  background-color: $color-base-primary;
+  color: $color-base-secondary-light;
+}
+
+.timeline .line .content {
+  color: $color-font-primary;
+}
+
+.timeline .separator {
+  background-color: $color-base-primary;
+}
+
+.timeline.dark .line .icon {
+  background-color: $color-base-primary-dark;
+  color: $color-base-secondary-light;
+}
+
+.timeline.dark .line .content {
+  color: $color-base-primary-light;
+}
+
+.timeline.dark .separator {
+  background-color: $color-base-primary-dark;
+}
+
+.timeline.small .line .icon {
+  padding: $size-general-small;
+  font-size: $size-general-small;
+  border-radius: $size-general-medium;
+}
+
+.timeline.small .line .content {
+  margin-left: $size-general-small;
+}
+
+.timeline.small .separator {
+  padding-top: $size-general-xlarge;
+  padding-bottom: $size-general-xlarge;
+  width: $size-general-xsmall;
+  left: $size-general-small;
+  margin-top: -1%;
+  margin-bottom: -1%;
+  z-index: -1;
+  position: relative;
+}
+
+.timeline.medium .line .icon {
+  padding: $size-general-medium;
+  font-size: $size-general-medium;
+  border-radius: $size-general-large;
+}
+
+.timeline.medium .line .content {
+  margin-left: $size-general-medium;
+}
+
+.timeline.medium .separator {
+  padding-top: $size-general-xxlarge;
+  padding-bottom: $size-general-xxlarge;
+  width: $size-general-xxsmall;
+  left: $size-general-medium;
+  margin-top: -1%;
+  margin-bottom: -1%;
+  z-index: -1;
+  position: relative;
+}
+
+.timeline.large .line .icon {
+  padding: $size-general-large;
+  font-size: $size-general-large;
+  border-radius: $size-general-xlarge;
+}
+
+.timeline.large .line .content {
+  margin-left: $size-general-large;
+}
+
+.timeline.large .separator {
+  padding-top: $size-general-xxlarge;
+  padding-bottom: $size-general-xxlarge;
+  width: $size-general-xsmall;
+  left: $size-general-large;
+  margin-top: -1%;
+  margin-bottom: -1%;
+  z-index: -1;
+  position: relative;
+}

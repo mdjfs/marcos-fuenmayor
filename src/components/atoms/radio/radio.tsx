@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa";
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useThemedClasses } from "../../../hooks/useClasses";
 import { RadioProps } from "./radio.interfaces";
 import "./radio.scss";
 
@@ -10,7 +10,7 @@ const Radio = ({
   isMultiple,
   ...props
 }: RadioProps) => {
-  const [classes] = useClasses("radio", { props });
+  const classes = useThemedClasses(props, "radio");
 
   const radioClass = `${classes} ${isMultiple ? "multiple" : "single"}`;
 

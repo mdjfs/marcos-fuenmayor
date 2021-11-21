@@ -3,14 +3,14 @@ import { Choice, SelectProps } from "./select.interfaces";
 import { FaAngleDown, FaTimes } from "react-icons/fa";
 import "./select.scss";
 import { ChangeEvent, useState, CSSProperties, useEffect } from "react";
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useBiThemedClasses } from "../../../hooks/useClasses";
 
 const Select = ({ onSelectChoice, choices, ...props }: SelectProps) => {
   const [isOpen, setIsOpen] = useState<boolean | undefined>();
   const [filtered, setFiltered] = useState<Array<string>>();
   const [choice, setChoice] = useState<Choice>();
   const firstRender = isOpen === undefined;
-  const [classes] = useClasses("select", { props, IsBiThemed: true });
+  const classes = useBiThemedClasses(props, "select");
   const status = firstRender ? "" : isOpen ? "opened" : "closed";
   const selectClass = classes + " " + status;
 

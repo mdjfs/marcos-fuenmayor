@@ -1,11 +1,11 @@
 import { ChangeEvent, useState } from "react";
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useBiThemedClasses } from "../../../hooks/useClasses";
 import { InputProps } from "./input.interfaces";
 import "./input.scss";
 
 const Input = ({ onType, matchRegex, type, ...props }: InputProps) => {
   const [isMatched, setIsMatched] = useState(true);
-  const [classes, inherited] = useClasses("input", { props, IsBiThemed: true });
+  const classes = useBiThemedClasses(props, "input");
 
   function listener(e: ChangeEvent<HTMLInputElement>) {
     if (onType) {
@@ -20,10 +20,10 @@ const Input = ({ onType, matchRegex, type, ...props }: InputProps) => {
 
   return (
     <input
+      {...props}
+      className={`${classes} ${isMatched ? "matched" : "unmatched"}`}
       type="text"
       onChange={listener}
-      className={`${classes} ${isMatched ? "matched" : "unmatched"}`}
-      {...inherited}
     />
   );
 };

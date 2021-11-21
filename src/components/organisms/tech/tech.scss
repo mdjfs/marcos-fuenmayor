@@ -1,0 +1,19 @@
+@import "../../../subatoms/build/scss/variables";
+
+.tech-header {
+  width: 100%;
+  text-align: center;
+}
+
+.tech .stacks {
+  padding: $size-general-xxlarge;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: $size-general-xxlarge;
+}
+
+@media (orientation: portrait) {
+  .tech .stacks {
+    grid-template-columns: 1fr 1fr;
+  }
+}

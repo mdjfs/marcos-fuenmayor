@@ -1,10 +1,9 @@
-import { InputHTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
 import { BiThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
-export type OverrideInput = BiThemedComponent &
-  InputHTMLAttributes<HTMLInputElement>;
-
-export interface InputProps extends OverrideInput {
+export interface InputProps
+  extends BiThemedComponent,
+    HTMLAttributes<HTMLInputElement> {
   onType?: (value: string, matched?: boolean) => void;
   matchRegex?: RegExp;
 }

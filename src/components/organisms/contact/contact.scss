@@ -1,0 +1,36 @@
+@import "../../../subatoms/build/scss/variables";
+
+.contact {
+  background-color: $color-base-primary;
+}
+
+.contact.dark {
+  background-color: $color-base-primary-dark;
+}
+
+.contact-header {
+  padding-top: $size-general-medium;
+  width: 100%;
+  text-align: center;
+}
+
+.contact .contact-ways {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: $size-general-large;
+  grid-gap: $size-general-xxlarge;
+}
+
+.contact .contact-ways > * {
+  display: grid;
+  grid-gap: $size-general-large;
+}
+
+@media (orientation: landscape) {
+  .contact .contact-ways > * {
+    padding: $size-general-xxlarge;
+  }
+  .contact .contact-ways {
+    grid-template-columns: 1fr 1fr;
+  }
+}

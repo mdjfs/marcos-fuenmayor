@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { ThemedComponent } from "../../../common/interfaces/theme.interfaces";
 
-export interface HeaderProps extends ThemedComponent {
-  content: string | ReactNode;
-}
+export interface HeaderProps
+  extends ThemedComponent,
+    HTMLAttributes<HTMLHeadElement> {}

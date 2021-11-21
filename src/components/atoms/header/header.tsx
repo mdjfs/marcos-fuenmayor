@@ -1,10 +1,14 @@
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useThemedClasses } from "../../../hooks/useClasses";
 import { HeaderProps } from "./header.interfaces";
 import "./header.scss";
 
 const Header = (props: HeaderProps) => {
-  const [classes] = useClasses("header", { props });
-  return <h1 className={classes}>{props.content}</h1>;
+  const classes = useThemedClasses(props, "header");
+  return (
+    <h1 className={classes} {...props}>
+      {props.children}
+    </h1>
+  );
 };
 
 export default Header;

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useBiThemedClasses } from "../../../hooks/useClasses";
 import { ToggleProps } from "./toggle.interfaces";
 import "./toggle.scss";
 
 const Toggle = ({ left, right, onToggle, ...props }: ToggleProps) => {
   const [status, setStatus] = useState(true);
-  const [classes] = useClasses("toggle", { props, IsBiThemed: true });
+  const classes = useBiThemedClasses(props, "toggle");
   const direction = status ? "left" : "right";
   const toggleClass = classes + " " + direction;
 

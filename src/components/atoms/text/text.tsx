@@ -1,10 +1,14 @@
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useThemedClasses } from "../../../hooks/useClasses";
 import { TextProps } from "./text.interfaces";
 import "./text.scss";
 
-const Text = ({ content, ...props }: TextProps) => {
-  const [classes] = useClasses("text", { props });
-  return <p className={classes}>{content}</p>;
+const Text = ({ children, ...props }: TextProps) => {
+  const classes = useThemedClasses(props, "text");
+  return (
+    <p className={classes} {...props}>
+      {children}
+    </p>
+  );
 };
 
 export default Text;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoMenuOutline, IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { useDispatch } from "react-redux";
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useThemedClasses } from "../../../hooks/useClasses";
 import {
   SET_DARK_MODE,
   SET_LIGHT_MODE,
@@ -12,7 +12,7 @@ import Toggle from "../../atoms/toggle/toggle";
 import "./navigator.scss";
 
 export const Navigator = () => {
-  let [className] = useClasses("navigator");
+  let className = useThemedClasses({}, "navigator");
   const [isTop, setIsTop] = useState<boolean>();
   const [isPortrait, setIsPortrait] = useState<boolean>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -50,15 +50,21 @@ export const Navigator = () => {
   className += isPortrait ? " portrait" : " landscape";
 
   const links = [
-    <ALink isPrimary={false} key="inicio" content="Inicio" />,
-    <ALink isPrimary={false} key="opciones" content="Opciones" />,
-    <ALink isPrimary={false} key="contacto" content="Contacto" />,
+    <ALink isPrimary={false} key="inicio">
+      Inicio
+    </ALink>,
+    <ALink isPrimary={false} key="opciones">
+      Opciones
+    </ALink>,
+    <ALink isPrimary={false} key="contacto">
+      Contacto
+    </ALink>,
   ];
 
   return (
     <div className={className}>
       <div className="logo">
-        <Text content="MF" />
+        <Text>MF</Text>
       </div>
       <div className="content">
         {isPortrait && (

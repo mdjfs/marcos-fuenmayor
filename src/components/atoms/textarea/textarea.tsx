@@ -1,15 +1,12 @@
 import { ChangeEvent, useState } from "react";
-import { useClasses } from "../../../common/helpers/components.helpers";
+import { useBiThemedClasses } from "../../../hooks/useClasses";
 import { TextAreaProps } from "./textarea.interfaces";
 import "./textarea.scss";
 
 const TextArea = ({ onType, matchRegex, ...props }: TextAreaProps) => {
   const [isMatched, setIsMatched] = useState(true);
 
-  const [classes, inherited] = useClasses("textarea", {
-    props,
-    IsBiThemed: true,
-  });
+  const classes = useBiThemedClasses(props, "textarea");
   const matched = isMatched ? "matched" : "unmatched";
   const inputClass = classes + " " + matched;
 
@@ -24,7 +21,7 @@ const TextArea = ({ onType, matchRegex, ...props }: TextAreaProps) => {
     }
   }
 
-  return <textarea onChange={listener} className={inputClass} {...inherited} />;
+  return <textarea {...props} onChange={listener} className={inputClass} />;
 };
 
 export default TextArea;
